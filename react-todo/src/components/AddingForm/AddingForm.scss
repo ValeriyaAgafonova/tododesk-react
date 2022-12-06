@@ -1,0 +1,65 @@
+%borders {
+  border-radius: 10px;
+  border: 4px solid green;
+  padding: 15px;
+}
+
+.form {
+    border-radius: 35px;
+    border: 5px solid rgb(32, 156, 30);
+padding: 20px;
+  font-size: 20px;
+  box-sizing: border-box;
+  width: 80%;
+  height: 80%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  &HeadingInput {
+    @extend %borders;
+    font-size: 20px;
+    width: 80%;
+  }
+  &Textarea {
+    resize: none;
+    @extend %borders;
+    font-size: 20px;
+  }
+&PriorityHeading{
+    align-self: flex-start;
+    margin: 0;
+}
+  &Radio {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 5px;
+    width: 30px;
+    height: 30px;
+    border: 2px solid #999;
+    transition: 0.2s all linear;
+    outline: none;
+    margin-right: 5px;
+    position: relative;
+  }
+
+  .priorityButtons {
+    display: flex;
+  }
+  .formRadio:first-child:checked {
+    border: 15px solid green;
+  }
+  .formRadio:nth-child(0n + 2):checked {
+    border: 15px solid orange;
+  }
+  .formRadio:nth-child(0n + 3):checked {
+    border: 15px solid red;
+  }
+#endDate{
+    @extend %borders;
+    width: 50%;
+    min-width: 150px;
+}
+}
